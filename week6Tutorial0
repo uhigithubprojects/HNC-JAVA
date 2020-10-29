@@ -1,0 +1,89 @@
+package week7;
+import java.util.Scanner;
+
+public class Tutorial0 {
+	
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static String getName() {
+		
+		String name;
+		System.out.println("Please enter your name");
+		name = scanner.next();
+		return(name);
+		
+		
+		
+		
+	}
+	
+	
+	public static int getAge() {
+		
+		int age;
+		System.out.println("Please enter your age");
+		age = scanner.nextInt();
+		while(age < 15 || age > 60) {
+			System.out.println("Whoa there boio your age need to be between 15 and 60");
+			age = scanner.nextInt();
+		}
+		
+		return(age);
+		
+	}
+	
+	public static String getGender() {
+		
+		String gender;
+		System.out.println("Please enter your gender in the format: M = male, F = female");
+		gender = scanner.next();
+		return(gender);
+		
+		
+		
+	}
+	
+	
+	
+	
+	public static void displayDetails(String displayName, int displayAge, String displayGender ) {
+		
+		if (displayGender.equals("M") || displayGender.equals("m")) {
+			
+			displayGender = "Male";
+	
+		} else {
+			
+			displayGender = "Female";
+		}
+		
+		
+		
+		System.out.println("The users name is " + displayName + ", their age is " + displayAge + " and their gender is " + displayGender + ".");
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+		String name;
+		int age;
+		String gender;
+		name = getName();
+		age = getAge();
+		gender = getGender();
+		displayDetails(name, age, gender);
+		
+		
+		
+		
+
+	}
+
+}
