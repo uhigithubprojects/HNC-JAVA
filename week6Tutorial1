@@ -1,0 +1,44 @@
+package week7;
+import java.util.Scanner;
+
+public class Tutorial1 {
+	public static Scanner scanner = new Scanner(System.in);
+	
+	public static int getNumber() {
+		int user_number;
+		System.out.println("Please enter a number");
+		user_number = scanner.nextInt();
+		return(user_number);
+	}
+	
+	
+	public static int calcSquare(int number) {
+		int square_number;
+		
+		square_number = number * number;
+		
+		return(square_number);
+	}
+	
+	
+	
+	public static void displayAnswer(int user_number, int square_number) {
+		
+		System.out.println(user_number + " squared equals " + square_number + ".");
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		int user_number;
+		int square_number;
+		
+		user_number = getNumber();
+		square_number = calcSquare(user_number);
+		displayAnswer(user_number, square_number);
+	
+		
+	}
+
+}
