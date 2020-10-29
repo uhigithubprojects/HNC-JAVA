@@ -1,0 +1,64 @@
+package week7;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Tutorial3 {
+	
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static double rate() {
+		int hours;
+		double pay;
+		double total;
+		
+		System.out.println("Please how many hours you work.");
+		hours = scanner.nextInt();
+		System.out.println("Please enter how much you are paid per hour.");
+		pay = scanner.nextInt();
+		total = (pay * hours);
+		return(total);
+		
+	}
+	
+	public static String name() {
+		String forename;
+		String surname;
+		String foreAndSur;
+		System.out.println("Please enter your forename.");
+		forename = scanner.next();
+		System.out.println("Please enter you surname.");
+		surname = scanner.next();
+		foreAndSur = (forename + " " + surname);
+		return (foreAndSur);
+		
+		
+	}
+	
+	
+	
+	
+	public static void displayTotal(String name, double total) {
+		
+		DecimalFormat df = new DecimalFormat("#.00");
+		
+		System.out.println(name + " earns £" + df.format(total) + " as a salary.");
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		String name;
+		double total;
+		name = name();
+		total = rate();
+		displayTotal(name, total);
+		
+		
+		
+	}
+	
+
+
+}
