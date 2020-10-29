@@ -1,0 +1,64 @@
+package week7;
+import java.util.Scanner;
+
+public class Tutorial5 {
+	
+	public static int calcFactorial(int userNumber) {
+		
+		int total=1; //iterates until x == nos1
+			for (int x=1;x<=userNumber;x++)
+			{
+			total = total *x;	
+			}
+		return(total);
+	}
+	
+	
+	
+	public static int getNumber() {
+		Scanner kboard = new Scanner(System.in);
+		int userNumber=0; 
+		System.out.println("Please enter number to factor ");
+		userNumber = kboard.nextInt();
+		return(userNumber);
+		
+	}
+	
+	
+	
+	public static void displayAnswer(int userNumber, int newtotal) {
+		for (int counter=userNumber; counter>=1; counter--)
+		{
+		  if (counter > 1)
+		  	{
+			  System.out.print(counter+" * ");// displays 5*4*3*.. and stays on same line
+		  	}
+		  else
+	  		{
+		  System.out.print(counter);// only want to display the number ie 1 and not 1 *
+		  }
+		}  
+		
+		System.out.println(" = "+newtotal);
+		System.out.println("Factorial = "+newtotal); 
+
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		int userNumber;
+		int total;
+		userNumber = getNumber();
+		total = calcFactorial(userNumber);
+		displayAnswer(userNumber, total);
+		
+		
+		
+	}
+	
+	
+	
+}
+
