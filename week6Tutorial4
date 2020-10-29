@@ -1,0 +1,84 @@
+package week7;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Tutorial4 {
+
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static double calculateRate() {
+		int hours;
+		double pay;
+		double total;
+		
+		System.out.println("Please how many hours you work.");
+		hours = scanner.nextInt();
+		System.out.println("Please enter how much you are paid per hour.");
+		pay = scanner.nextInt();
+		total = (pay * hours);
+		return(total);
+		
+	}
+	
+	public static String getForename() {
+		String forename;
+		System.out.println("Please enter your forename.");
+		forename = scanner.next();
+		return (forename);
+		
+		
+	}
+	
+	
+	public static String getSurname() {
+		
+		String surname;
+		System.out.println("Please enter you surname.");
+		surname = scanner.next();
+		return(surname);
+	}
+	
+	
+	public static String getUsername(String forename, String surname) {
+		
+		String username;
+		username = (forename.substring(0, 1).toLowerCase() + surname);
+		return(username);
+		
+	}
+	
+	
+	
+	
+	public static void displayTotal(String username, double total) {
+		
+		DecimalFormat df = new DecimalFormat("#.00");
+		
+		System.out.println(username + " earns £" + df.format(total) + " as a salary.");
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		String forename;
+		String surname;
+		String username;
+		double total;
+		forename = getForename();
+		surname = getSurname();
+		username = getUsername(forename, surname);
+		total = calculateRate();
+		displayTotal(username, total);
+		
+		
+		
+	}
+	
+
+
+
+
+}
