@@ -1,0 +1,49 @@
+package week7;
+import java.util.Scanner;
+
+public class Tutorial8 {
+	
+	public static void main(String[] args) {
+		
+		Scanner kboard = new Scanner(System.in);
+		
+		int sideA;
+		int sideB;
+		int sideC;
+		int sideASquared;
+		int sideBSquared;
+		int sideCSquared;
+		int aSquaredAddBSquared;
+		
+		System.out.println("Please enter side A.");
+		sideA = kboard.nextInt();
+		
+		System.out.println("Please enter side B.");
+		sideB = kboard.nextInt();
+		
+		System.out.println("Please enter side C.");
+		sideC = kboard.nextInt();
+		
+		sideASquared =  (int) Math.pow(sideA, 2);
+		sideBSquared =  (int) Math.pow(sideB, 2);
+		sideCSquared =  (int) Math.pow(sideC, 2);
+		
+		aSquaredAddBSquared = sideASquared + sideBSquared;
+		
+		if(aSquaredAddBSquared == sideCSquared) {
+			
+			System.out.println("Your triangle is right angled.");
+			
+			
+		} else {
+			
+			System.out.println("Your triangle is not right angled.");
+			
+		}
+		
+		
+	}
+	
+	
+	
+}
